@@ -17,16 +17,11 @@ namespace Valutaomvandlare
             
            Methods methods = new Methods();
             
-            string resultcurrency = Methods.PrintOutYour(args,"value","value");
-            double valuex = Methods.Message(args,0);
+           string resultcurrency = Methods.PrintOutYour(args,"value","value");
+           double valuex = Methods.Message(args,0);
             
-            Methods.DisplayOutResults(args,valuex);
-
-          
- 
-            
-
-            Console.ReadKey();
+           Methods.DisplayOutResults(args,valuex);
+           Console.ReadKey();
            
         }
        
