@@ -11,8 +11,8 @@ namespace Valutaomvandlare
     class Methods
     {
         /// <summary>
-        /// I have all my met´hods in here, and i also have my arguments
-        /// You can type in for exeample USD EURO 200 so in thatr order you must passed the argumnts
+        /// I have all my Methods in here, and i also have my arguments
+        /// You can type in for exeample USD EURO 200 so in that order you must passed the argumnts
         /// </summary>
 
         //This Variables is the one that holds Currency 1 and Currency 2
