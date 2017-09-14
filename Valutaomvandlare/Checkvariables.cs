@@ -12,8 +12,7 @@ namespace Valutaomvandlare
         /// This where i store my Variables when i checked,
         /// whwen user type in what currency they 
         /// </summary>
-        public string Norwey = "NOK";
-        public string Sweden = "KR";
+        public string Sweden = "SEK";
         public string Usd = "USD";
         public string Euro = "EURO";
         

@@ -31,7 +31,7 @@ namespace Valutaomvandlare
 
 
             //This is whwre you can choosed currency from
-            Console.WriteLine($"We have this Curency \n1: {checkvariables.Usd}\n2: {checkvariables.Euro}\n3: {checkvariables.Sweden} ");
+            Console.WriteLine($"We have this Curency \n1: {checkvariables.Sweden}\n2: {checkvariables.Usd}\n3: {checkvariables.Euro} ");
             Console.WriteLine();
             Console.Write("Choose Currency : ", resultcurrency);
 
@@ -55,7 +55,7 @@ namespace Valutaomvandlare
                 switch (mainLanguageCheck)
                 {
 
-                    case "KR":
+                    case "SEK":
                         SweVar billssweden = new SweVar();
                         billssweden.SweBills();
                         break;
@@ -107,7 +107,7 @@ namespace Valutaomvandlare
             { 
                 switch (mainLanguageCheckTwo)
                 {
-                    case "KR":
+                    case "SEK":
                         SweVar billssweden = new SweVar();
                         billssweden.SweBills();
                         break;
@@ -237,7 +237,7 @@ namespace Valutaomvandlare
             {
                 Console.Write($"You typed in : {valuex} {checkvariables.Euro} ");
                 SweValueClass swevalueclass = new SweValueClass();
-                mainvar.Results = valuex * swevalueclass.euroToDollar;
+                mainvar.Results = valuex / swevalueclass.usdToEuro;
                 Console.WriteLine();
                 Console.WriteLine($"You get back this value : {mainvar.Results.ToString("#.00")} {checkvariables.Usd}");
 
@@ -290,9 +290,10 @@ namespace Valutaomvandlare
                             num = (int)(amount / UsdCoins[i]);
 
 
-                            Console.WriteLine(num + " " + " " + UsdCoins[i] + " CENT");
 
-                            amount = Math.Round(amount % UsdCoins[i], 3);
+                            Console.WriteLine(num + " " + " " + Math.Round((UsdCoins[i] * 100),2) + " CENT");
+
+                            amount = Math.Round(amount % UsdCoins[i],2);
 
                         }
 
@@ -304,9 +305,10 @@ namespace Valutaomvandlare
             {
                 Console.WriteLine($"You typed in {valuex} {checkvariables.Usd} ");
                 SweValueClass swevalueclass = new SweValueClass();
+                Console.WriteLine(valuex);
                 mainvar.Results = valuex * swevalueclass.usdToEuro;
                 Console.WriteLine();
-                Console.WriteLine($"You get back this value {mainvar.Results} {checkvariables.Euro}");
+                Console.WriteLine($"You get back this value {mainvar.Results.ToString("#.00")} {checkvariables.Euro}");
 
 
                 // I ´dont want this to show from command line m´when u passed the arguments
@@ -328,7 +330,7 @@ namespace Valutaomvandlare
 
                     int num;
 
-                    for (int i = 6; i > 0; i--)
+                    for (int i = 6; i >= 0; i--)
                     {
                         if (Eurocents[i] <= amount)
                         {
@@ -345,17 +347,15 @@ namespace Valutaomvandlare
                     double[] Eurocents1 = new double[] {euro.OneCent = 0.01d,euro.TwoCent = 0.02d,euro.
                     FiveCent =0.05d,euro.TenCent = 0.10d,euro.TwentyCent = 0.20d,
                     euro.FifhtyCentEuro = 0.50d};
+                    amount = Math.Round(amount, 2);
 
-
-                    for (int i = 5; i > 0; i--)
+                    for (int i = 5; i >= 0; i--)
                     {
                         if (Eurocents1[i] <= amount)
                         {
                             num = (int)(amount / Eurocents1[i]);
-
-                         Console.WriteLine(num + " " + " " + Eurocents1[i] + " CENT");
-
-                            amount = Math.Round(amount % Eurocents1[i], 2);
+                            Console.WriteLine(num + " " + " " + Math.Round((Eurocents1[i] * 100),2) + " CENT");
+                            amount = Math.Round(amount % Eurocents1[i],2);
 
                         }
 
@@ -366,9 +366,9 @@ namespace Valutaomvandlare
             {
                 Console.WriteLine($"You typed in {valuex} {checkvariables.Sweden} ");
                 SweValueClass swevalueclass = new SweValueClass();
-                mainvar.Results = valuex * 0.11;
+                mainvar.Results = valuex / swevalueclass.Euro;
                 Console.WriteLine();
-                Console.WriteLine($"You get back this value {mainvar.Results} {checkvariables.Euro} ");
+                Console.WriteLine($"You get back this value {Math.Round(mainvar.Results,2)} {checkvariables.Euro} ");
 
                 // I ´dont want this to show from command line m´when u passed the arguments
 
@@ -382,7 +382,7 @@ namespace Valutaomvandlare
 
                     NorVar euro = new NorVar();
 
-                    int[] Eurocents = new int[] {euro.OneEuro = 1,euro.TwoEuro = 2,euro.TenEuro = 10,euro.FifhtyEuro = 50,
+                    int[] Eurocents = new int[] {euro.OneEuro = 1,euro.TwoEuro = 2,euro.TenEuro = 10,euro.TwentyEuro = 20,euro.FifhtyEuro = 50,
                     euro.OneHundredEuro = 100, euro.TwoHundredEuro = 200,euro.FiveHundredEuro = 500 };
 
 
@@ -390,7 +390,7 @@ namespace Valutaomvandlare
 
                     int num;
 
-                    for (int i = 6; i > 0; i--)
+                    for (int i = 7; i > 0; i--)
                     {
                         if (Eurocents[i] <= amount)
                         {
@@ -416,9 +416,9 @@ namespace Valutaomvandlare
                             num = (int)(amount / Eurocents1[i]);
 
 
-                            Console.WriteLine(num + " " + " " + Eurocents1[i] + " CENT");
+                            Console.WriteLine(num + " " + " " + (Eurocents1[i] * 100) + " CENT");
 
-                            amount = Math.Round(amount % Eurocents1[i], 3);
+                            amount = Math.Round(amount % Eurocents1[i],2);
 
                         }
 
@@ -517,7 +517,8 @@ namespace Valutaomvandlare
             {
                 Console.WriteLine($"You typed in {valuex} {checkvariables.Sweden} ");
                 SweValueClass swevalueclass = new SweValueClass();
-                mainvar.Results = valuex * 0.124;
+                mainvar.Results = valuex / swevalueclass.dollartoSweden;
+                    ;
                 Console.WriteLine($"You get back this value {mainvar.Results.ToString("#.00")} {checkvariables.Usd}");
 
                 // I ´dont want this to show from command line m´when u passed the arguments
@@ -564,9 +565,10 @@ namespace Valutaomvandlare
                             num = (int)(amount / UsdCoins[i]);
 
 
-                            Console.WriteLine(num + " " + " " + UsdCoins[i] + " CENT");
+                            Console.WriteLine(num + " " + " " + Math.Round( (UsdCoins[i] * 100),2) + " CENT");
+                           
 
-                            amount = Math.Round(amount % UsdCoins[i], 2);
+                            amount = Math.Round(amount % UsdCoins[i],2);
 
                         }
 
