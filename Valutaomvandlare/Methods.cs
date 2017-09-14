@@ -131,7 +131,6 @@ namespace Valutaomvandlare
                 Console.WriteLine();
                 Console.WriteLine($"You want to change {checkvariables.Usd} to {checkvariables.Euro}");
                 Console.WriteLine();
-
             }
 
             //sweden to euro  and euro to sweden
@@ -140,7 +139,6 @@ namespace Valutaomvandlare
                 Console.WriteLine();
                 Console.WriteLine($"You want to change {checkvariables.Sweden} to {checkvariables.Euro}");
                 Console.WriteLine();
-
             }
             else if (mainLanguageCheck == checkvariables.Euro && mainLanguageCheckTwo == checkvariables.Sweden)
             {
@@ -155,7 +153,6 @@ namespace Valutaomvandlare
                 Console.WriteLine();
                 Console.WriteLine($"You want to change {checkvariables.Usd} to {checkvariables.Sweden}");
                 Console.WriteLine();
-
             }
             else if (mainLanguageCheck == checkvariables.Sweden && mainLanguageCheckTwo == checkvariables.Usd)
             {
@@ -181,11 +178,9 @@ namespace Valutaomvandlare
             if (args.Count() == 3)
             {
                 MGS = Convert.ToDouble(args[2]);
-
             }
             else
             {
-               
                 Console.Write("Enter how much you want to change : ", MGS);
                 parse = Console.ReadLine();
 
@@ -267,9 +262,6 @@ namespace Valutaomvandlare
                         if (UsdCoins[i] <= amount)
                         {
                             num = (int)(amount / UsdCoins[i]);
-
-
-
                             Console.WriteLine(num + " " + " " + Math.Round((UsdCoins[i] * 100),2) + " CENT");
 
                             amount = Math.Round(amount % UsdCoins[i],2);
@@ -406,7 +398,7 @@ namespace Valutaomvandlare
                 Console.WriteLine();
                 Console.WriteLine($"You get back this value {Math.Round(mainvar.Results, 0)} {checkvariables.Sweden}");
 
-                // I ´dont want this to show from command line m´when u passed the arguments
+                // I ´dont want this to show from command line when u passed the arguments
 
                 if (args.Count() != 3)
                 {
