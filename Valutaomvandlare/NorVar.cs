@@ -51,7 +51,7 @@ namespace Valutaomvandlare
                 FifhtyEuro = _FifhtyEuro;
                 OneHundredEuro = _OneHundredEuro;
                 TwoHundredEuro = _TwoHundredEuro;
-                FiveHundredEuro = _FiveHundredEuro
+                FiveHundredEuro = _FiveHundredEuro;
             }
 
         public void EuroBills()
