@@ -68,7 +68,7 @@ namespace Valutaomvandlare
                         break;
                     default:
                         Console.ForegroundColor = ConsoleColor.Red;
-                        Console.WriteLine("you type the wrong Currency type exit to exit the console, TRY AGAIN".ToUpper());
+                        Console.WriteLine("you type the wrong Currency, TRY AGAIN".ToUpper());
                         Console.ResetColor();
                         goto Start;
 
@@ -111,7 +111,7 @@ namespace Valutaomvandlare
                         break;
                     default:
                         Console.ForegroundColor = ConsoleColor.Red;
-                        Console.WriteLine("you type the wrong Currency type exit to exit the console, TRY AGAIN".ToUpper());
+                        Console.WriteLine("you type the wrong Currency, TRY AGAIN".ToUpper());
                         Console.ResetColor();
                         goto back;
                 }
