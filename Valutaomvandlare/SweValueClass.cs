@@ -18,12 +18,6 @@ namespace Valutaomvandlare
         public double usdToEuro = 0.85d;
         public double euroToDollar = 1.18d;
 
-        public SweValueClass(double _dollarToSWeeden = 8.08d,double _Euro = 9.48d,double _usdToEuro = 0.85d,double _eurotodollar = 1.18d)
-        {
-            dollartoSweden = _dollarToSWeeden;
-            Euro = _Euro;
-            usdToEuro = _usdToEuro;
-            euroToDollar = _eurotodollar;
-        }
+
     }
 }

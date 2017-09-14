@@ -21,11 +21,9 @@ namespace Valutaomvandlare
         public int FifhtyDollar { get; set; }
         public int TwentyDollar { get; set; }
         public int TenDollar { get; set; }
-
         public int FiveDollar { get; set; }
         public int TwoDollar { get; set; }
         public int OneDollar { get; set; }
-
         public double FifhtyCent { get; set; }
         public double TwentyFiveCent { get; set; }
         public double TenCent { get; set; }

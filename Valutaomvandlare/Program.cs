@@ -15,13 +15,11 @@ namespace Valutaomvandlare
         static void Main(string[] args)
         {
             
-           Methods methods = new Methods();
-            
-           string resultcurrency = Methods.PrintOutYour(args,"value","value");
-           double valuex = Methods.Message(args,0);
-            
-           Methods.DisplayOutResults(args,valuex);
-           Console.ReadKey();
+         Methods methods = new Methods();
+         string resultcurrency = Methods.PrintOutYour(args,"value","value");
+         double valuex = Methods.Message(args,0);
+         Methods.DisplayOutResults(args,valuex);
+         Console.ReadKey();
            
         }
        

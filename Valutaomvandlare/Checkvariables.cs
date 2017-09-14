@@ -15,8 +15,6 @@ namespace Valutaomvandlare
         public string Sweden = "SEK";
         public string Usd = "USD";
         public string Euro = "EURO";
-        
-
        
     }
 }

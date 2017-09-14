@@ -29,7 +29,6 @@ namespace Valutaomvandlare
             Console.WriteLine("------------------------Currency Changer----------------------------");
             Console.WriteLine();
 
-
             //This is whwre you can choosed currency from
             Console.WriteLine($"We have this Curency \n1: {checkvariables.Sweden}\n2: {checkvariables.Usd}\n3: {checkvariables.Euro} ");
             Console.WriteLine();
@@ -73,24 +72,15 @@ namespace Valutaomvandlare
                         Console.ResetColor();
                         goto Start;
 
-
                 }
 
             }
           
             Console.Write($"You typed in : {mainLanguageCheck}");
-           
-
             Console.WriteLine();
-
             back:
-            
             Console.Write("Choose currency to change to : ", valueuTwoCurrency);
           
-
-
-
-
             //This is for the argument here i passed argument 2
             if (args.Count() == 3)
             {
@@ -127,8 +117,6 @@ namespace Valutaomvandlare
                 }
              }
             
-
-
             //euro to dollar and dollar to euro
 
             if (mainLanguageCheck == checkvariables.Euro && mainLanguageCheckTwo == checkvariables.Usd)
@@ -177,8 +165,6 @@ namespace Valutaomvandlare
             }
             string resultsOf = mainLanguageCheck + mainLanguageCheckTwo;
             return resultsOf;
-
-
         }
 
         /// <summary>
@@ -201,8 +187,6 @@ namespace Valutaomvandlare
             {
                
                 Console.Write("Enter how much you want to change : ", MGS);
-               
-
                 parse = Console.ReadLine();
 
                 if (!double.TryParse(parse, out MGS))
@@ -213,11 +197,9 @@ namespace Valutaomvandlare
 
                     goto test;
 
-
                 }
             }
-            return MGS;
-            
+            return MGS;           
         }
 
         /// <summary>
@@ -251,9 +233,6 @@ namespace Valutaomvandlare
                     Console.ResetColor();
                     Console.WriteLine("---------------------------");
                    
-
-
-
                     DollarVar dollarbills = new DollarVar();
 
                     int[] UsdBills = new int[]{dollarbills.OneDollar = 1,
@@ -335,10 +314,7 @@ namespace Valutaomvandlare
                         if (Eurocents[i] <= amount)
                         {
                             num = (int)amount / Eurocents[i];
-
-
                             Console.WriteLine(num + " " + " " + Eurocents[i] + " EURO");
-
                             amount = amount % Eurocents[i];
 
                         }
@@ -395,10 +371,7 @@ namespace Valutaomvandlare
                         if (Eurocents[i] <= amount)
                         {
                             num = (int)amount / Eurocents[i];
-
-
                             Console.WriteLine(num + " " + " " + Eurocents[i] + " EURO");
-
                             amount = amount % Eurocents[i];
 
                         }
@@ -414,8 +387,6 @@ namespace Valutaomvandlare
                         if (Eurocents1[i] <= amount)
                         {
                             num = (int)(amount / Eurocents1[i]);
-
-
                             Console.WriteLine(num + " " + " " + (Eurocents1[i] * 100) + " CENT");
 
                             amount = Math.Round(amount % Eurocents1[i],2);
@@ -459,8 +430,6 @@ namespace Valutaomvandlare
                         if (swedenbillsprint[i] <= amount)
                         {
                             num = (int)(amount / swedenbillsprint[i]);
-
-
                             Console.WriteLine(num + " " + " " + swedenbillsprint[i] + " KR");
 
                             amount = Math.Round(amount % swedenbillsprint[i], 1);
@@ -492,8 +461,10 @@ namespace Valutaomvandlare
                     SweVar billssweden = new SweVar();
 
                     double[] swedenbillsprint = new double[] { billssweden.SweOneKr = 1,billssweden.SweTenkr = 10,
-                billssweden.SweTwentyBills = 20,billssweden.SweFifthyBils = 50,billssweden.SweHundredBills = 100,billssweden.SweFivehundredBills = 500};
-
+                    billssweden.SweTwentyBills = 20,billssweden.SweFifthyBils = 50,billssweden.SweHundredBills = 100,billssweden.SweFivehundredBills = 500};
+                   
+                    //The amount came in 0.04999 something and i want to round it up so the varaiable amount gets 0.05
+                    //and i must hapend before the amount goes into the amount loop
                     double amount = Math.Round(mainvar.Results, 0);
 
                     int num;
@@ -503,8 +474,6 @@ namespace Valutaomvandlare
                         if (swedenbillsprint[i] <= amount)
                         {
                             num = (int)(amount / swedenbillsprint[i]);
-
-
                             Console.WriteLine(num + " " + " " + swedenbillsprint[i] +  " KR");
 
                             amount = amount % swedenbillsprint[i];
@@ -533,9 +502,9 @@ namespace Valutaomvandlare
                     DollarVar dollarbills = new DollarVar();
 
                     int[] UsdBills = new int[]{dollarbills.OneDollar = 1,
-                 dollarbills.TwoDollar = 2, dollarbills.FiveDollar = 5,
-                 dollarbills.TenDollar = 10, dollarbills.TwentyDollar = 20, dollarbills.FifhtyDollar = 50,
-                 dollarbills.OneHundredDollar = 100};
+                    dollarbills.TwoDollar = 2, dollarbills.FiveDollar = 5,
+                    dollarbills.TenDollar = 10, dollarbills.TwentyDollar = 20, dollarbills.FifhtyDollar = 50,
+                    dollarbills.OneHundredDollar = 100};
 
                     double amount = mainvar.Results;
 
@@ -546,8 +515,7 @@ namespace Valutaomvandlare
                         if (UsdBills[i] < amount)
                         {
                             num = (int)amount / UsdBills[i];
-
-                             Console.WriteLine(num + " " + " " + UsdBills[i] + " USD");
+                            Console.WriteLine(num + " " + " " + UsdBills[i] + " USD");
 
                             amount = amount % UsdBills[i];
 
@@ -563,11 +531,8 @@ namespace Valutaomvandlare
                         if (UsdCoins[i] <= amount)
                         {
                             num = (int)(amount / UsdCoins[i]);
-
-
                             Console.WriteLine(num + " " + " " + Math.Round( (UsdCoins[i] * 100),2) + " CENT");
                            
-
                             amount = Math.Round(amount % UsdCoins[i],2);
 
                         }
