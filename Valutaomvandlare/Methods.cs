@@ -75,12 +75,12 @@ namespace Valutaomvandlare
                 }
 
             }
-          
+
             Console.Write($"You typed in : {mainLanguageCheck}");
             Console.WriteLine();
             back:
             Console.Write("Choose currency to change to : ", valueuTwoCurrency);
-          
+
             //This is for the argument here i passed argument 2
             if (args.Count() == 3)
             {
@@ -94,7 +94,7 @@ namespace Valutaomvandlare
             Console.WriteLine($"You typed in : {mainLanguageCheckTwo}");
 
             if (args.Count() != 3)
-            { 
+            {
                 switch (mainLanguageCheckTwo)
                 {
                     case "SEK":
@@ -115,8 +115,8 @@ namespace Valutaomvandlare
                         Console.ResetColor();
                         goto back;
                 }
-             }
-            
+            }
+
             //euro to dollar and dollar to euro
 
             if (mainLanguageCheck == checkvariables.Euro && mainLanguageCheckTwo == checkvariables.Usd)
@@ -194,7 +194,7 @@ namespace Valutaomvandlare
 
                 }
             }
-            return MGS;           
+            return MGS;
         }
 
         /// <summary>
@@ -227,7 +227,7 @@ namespace Valutaomvandlare
                     Console.WriteLine($"This is what yuu get back in {checkvariables.Usd.ToUpper()}");
                     Console.ResetColor();
                     Console.WriteLine("---------------------------");
-                   
+
                     DollarVar dollarbills = new DollarVar();
 
                     int[] UsdBills = new int[]{dollarbills.OneDollar = 1,
@@ -262,9 +262,9 @@ namespace Valutaomvandlare
                         if (UsdCoins[i] <= amount)
                         {
                             num = (int)(amount / UsdCoins[i]);
-                            Console.WriteLine(num + " " + " " + Math.Round((UsdCoins[i] * 100),2) + " CENT");
+                            Console.WriteLine(num + " " + " " + Math.Round((UsdCoins[i] * 100), 2) + " CENT");
 
-                            amount = Math.Round(amount % UsdCoins[i],2);
+                            amount = Math.Round(amount % UsdCoins[i], 2);
 
                         }
 
@@ -322,8 +322,8 @@ namespace Valutaomvandlare
                         if (Eurocents1[i] <= amount)
                         {
                             num = (int)(amount / Eurocents1[i]);
-                            Console.WriteLine(num + " " + " " + Math.Round((Eurocents1[i] * 100),2) + " CENT");
-                            amount = Math.Round(amount % Eurocents1[i],2);
+                            Console.WriteLine(num + " " + " " + Math.Round((Eurocents1[i] * 100), 2) + " CENT");
+                            amount = Math.Round(amount % Eurocents1[i], 2);
 
                         }
 
@@ -336,7 +336,7 @@ namespace Valutaomvandlare
                 SweValueClass swevalueclass = new SweValueClass();
                 mainvar.Results = valuex / swevalueclass.Euro;
                 Console.WriteLine();
-                Console.WriteLine($"You get back this value {Math.Round(mainvar.Results,2)} {checkvariables.Euro} ");
+                Console.WriteLine($"You get back this value {Math.Round(mainvar.Results, 2)} {checkvariables.Euro} ");
 
                 // I ´dont want this to show from command line m´when u passed the arguments
 
@@ -381,7 +381,7 @@ namespace Valutaomvandlare
                             num = (int)(amount / Eurocents1[i]);
                             Console.WriteLine(num + " " + " " + (Eurocents1[i] * 100) + " CENT");
 
-                            amount = Math.Round(amount % Eurocents1[i],2);
+                            amount = Math.Round(amount % Eurocents1[i], 2);
 
                         }
 
@@ -454,7 +454,7 @@ namespace Valutaomvandlare
 
                     double[] swedenbillsprint = new double[] { billssweden.SweOneKr = 1,billssweden.SweTenkr = 10,
                     billssweden.SweTwentyBills = 20,billssweden.SweFifthyBils = 50,billssweden.SweHundredBills = 100,billssweden.SweFivehundredBills = 500};
-                   
+
                     //The amount came in 0.04999 something and i want to round it up so the varaiable amount gets 0.05
                     //and i must hapend before the amount goes into the amount loop
                     double amount = Math.Round(mainvar.Results, 0);
@@ -466,7 +466,7 @@ namespace Valutaomvandlare
                         if (swedenbillsprint[i] <= amount)
                         {
                             num = (int)(amount / swedenbillsprint[i]);
-                            Console.WriteLine(num + " " + " " + swedenbillsprint[i] +  " KR");
+                            Console.WriteLine(num + " " + " " + swedenbillsprint[i] + " KR");
 
                             amount = amount % swedenbillsprint[i];
 
@@ -479,7 +479,7 @@ namespace Valutaomvandlare
                 Console.WriteLine($"You typed in {valuex} {checkvariables.Sweden} ");
                 SweValueClass swevalueclass = new SweValueClass();
                 mainvar.Results = valuex / swevalueclass.dollartoSweden;
-                    ;
+                ;
                 Console.WriteLine($"You get back this value {mainvar.Results.ToString("#.00")} {checkvariables.Usd}");
 
                 // I ´dont want this to show from command line m´when u passed the arguments
@@ -523,9 +523,9 @@ namespace Valutaomvandlare
                         if (UsdCoins[i] <= amount)
                         {
                             num = (int)(amount / UsdCoins[i]);
-                            Console.WriteLine(num + " " + " " + Math.Round( (UsdCoins[i] * 100),2) + " CENT");
-                           
-                            amount = Math.Round(amount % UsdCoins[i],2);
+                            Console.WriteLine(num + " " + " " + Math.Round((UsdCoins[i] * 100), 2) + " CENT");
+
+                            amount = Math.Round(amount % UsdCoins[i], 2);
 
                         }
 
@@ -536,4 +536,4 @@ namespace Valutaomvandlare
     }
 }
 
- 
+

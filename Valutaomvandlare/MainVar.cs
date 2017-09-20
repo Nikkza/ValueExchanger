@@ -16,7 +16,7 @@ namespace Valutaomvandlare
         public MainVar(double _result = 0)
         {
             Results = _result;
-           
+
         }
 
     }

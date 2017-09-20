@@ -7,7 +7,7 @@ using System.Threading;
 
 namespace Valutaomvandlare
 {
-    
+
     class DollarVar
     {
 
@@ -54,7 +54,7 @@ namespace Valutaomvandlare
 
         public void DollarBillsMethod()
         {
-           
+
             int[] UsdBills = new int[]{OneDollar = 1,
                  TwoDollar = 2, FiveDollar = 5,
                  TenDollar = 10, TwentyDollar = 20, FifhtyDollar = 50, OneHundredDollar = 100};
@@ -75,7 +75,7 @@ namespace Valutaomvandlare
                 Thread.Sleep(100);
             }
         }
-       
+
     }
 }
 

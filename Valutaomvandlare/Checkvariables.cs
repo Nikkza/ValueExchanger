@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Valutaomvandlare
 {
     class Checkvariables
-    {   
+    {
         /// <summary>
         /// This where i store my Variables when i checked,
         /// whwen user type in what currency they 
@@ -15,6 +15,6 @@ namespace Valutaomvandlare
         public string Sweden = "SEK";
         public string Usd = "USD";
         public string Euro = "EURO";
-       
+
     }
 }
