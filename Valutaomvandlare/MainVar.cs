@@ -9,7 +9,7 @@ namespace Valutaomvandlare
     class MainVar
     {
         /// <summary>
-        /// varaiabel that givw the reult backs when i compare currency
+        /// varaiabel that give the reult backs when i compare currency
         /// </summary>
         public double Results { get; set; }
 

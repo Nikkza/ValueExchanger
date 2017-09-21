@@ -219,7 +219,7 @@ namespace Valutaomvandlare
                 Console.WriteLine($"You get back this value : {mainvar.Results.ToString("#.00")} {checkvariables.Usd}");
 
 
-                // I ´dont want this to show from command line m´when u passed the arguments
+                // I dont want this to show from command line when we passed the arguments
                 if (args.Count() != 3)
                 {
                     Console.WriteLine();
